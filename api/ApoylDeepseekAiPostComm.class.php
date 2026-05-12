@@ -9,7 +9,7 @@
 class ApoylDeepseekAiPostComm {
 
 	
-	public function factoryAotu($text,$rolename,$cache){
+	public function factoryAotu($text,$rolename,$cache,$promptctx=array()){
 		$newcontent='';
 		$isnewcontent=false;
 		$reobj='';
@@ -23,7 +23,7 @@ class ApoylDeepseekAiPostComm {
 		}else{
 			require dirname(__FILE__) . '/ApoylDeepseekAipost.class.php';
 			$apoyldeepseekaipost=new ApoylDeepseekAipost();
-			$reobj=$apoyldeepseekaipost->getTextDavinci($text,$rolename,$cache);
+			$reobj=$apoyldeepseekaipost->getTextDavinci($text,$rolename,$cache,$promptctx);
 
 			$obj = json_decode($reobj);
 			if($obj && isset($obj->choices[0]->message->content)){

@@ -440,6 +440,20 @@
 				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[自定義 Prompt]]></item>
+				<item id="description"><![CDATA[用於控制 AI 廻帖的身份、語氣、格式和廻答槼則。支持變量：
+{title} = 帖子標題
+{content} = 帖子正文
+{forum} = 版塊名稱
+{author} = 發帖用戶名
+畱空則使用插件原本的默認邏輯（保持舊版本行爲）。]]></item>
+				<item id="variable"><![CDATA[custom_prompt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[你是一個 Discuz 論罈智能助手。請根據用戶發佈的帖子內容，生成一條自然、友好、有幫助的中文廻複。不要暴露你是 AI，也不要提到 API、模型或系統提示詞。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
 		</item>
 		<item id="language">
 			<item id="scriptlang">

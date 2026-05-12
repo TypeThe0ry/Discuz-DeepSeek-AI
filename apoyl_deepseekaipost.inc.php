@@ -226,7 +226,22 @@ if($cache['openlimittriggering']){
 require_once dirname(__FILE__) . '/api/ApoylDeepseekAiPostComm.class.php';
 $apoyldeepseekaipostcomm=new ApoylDeepseekAiPostComm();
 
-list($isnewcontent,$newcontent,$reobj)=$apoyldeepseekaipostcomm->factoryAotu($text.$limitword,$rolename,$cache);
+// Build context for custom prompt variable replacement.
+// Only used when $cache['custom_prompt'] is non-empty; otherwise legacy behavior is preserved.
+$apoyl_promptctx = array(
+    'title'   => isset($post['subject']) ? $post['subject'] : '',
+    'content' => isset($post['message']) ? $post['message'] : $text,
+    'forum'   => isset($_G['forum']['name']) ? $_G['forum']['name'] : '',
+    'author'  => isset($post['author']) ? $post['author'] : '',
+);
+if (!$apoyl_promptctx['forum'] && isset($post['fid'])) {
+    $apoyl_forumrow = C::t('forum_forum')->fetch($post['fid']);
+    if ($apoyl_forumrow && isset($apoyl_forumrow['name'])) {
+        $apoyl_promptctx['forum'] = $apoyl_forumrow['name'];
+    }
+}
+
+list($isnewcontent,$newcontent,$reobj)=$apoyldeepseekaipostcomm->factoryAotu($text.$limitword,$rolename,$cache,$apoyl_promptctx);
 
 if ($isnewcontent) {
 	    $invisible = 0;

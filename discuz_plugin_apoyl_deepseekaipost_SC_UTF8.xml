@@ -440,6 +440,20 @@
 				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[自定义 Prompt]]></item>
+				<item id="description"><![CDATA[用于控制 AI 回帖的身份、语气、格式和回答规则。支持变量：
+{title} = 帖子标题
+{content} = 帖子正文
+{forum} = 版块名称
+{author} = 发帖用户名
+留空则使用插件原本的默认逻辑（保持旧版本行为）。]]></item>
+				<item id="variable"><![CDATA[custom_prompt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[你是一个 Discuz 论坛智能助手。请根据用户发布的帖子内容，生成一条自然、友好、有帮助的中文回复。不要暴露你是 AI，也不要提到 API、模型或系统提示词。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
 		</item>
 		<item id="language">
 			<item id="scriptlang">
