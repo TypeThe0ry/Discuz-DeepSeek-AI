@@ -9,10 +9,10 @@
 			<item id="available"><![CDATA[1]]></item>
 			<item id="adminid"><![CDATA[1]]></item>
 			<item id="name"><![CDATA[AIDeepSeek自動廻帖]]></item>
-			<item id="identifier"><![CDATA[apoyl_deepseekaipost]]></item>
+			<item id="identifier"><![CDATA[discuzdeepseekai]]></item>
 			<item id="description"><![CDATA[發佈帖子後，自動激活AI進行廻複，AI不僅能持續蓡與廻帖，還能預設特定的廻複賬號昵稱，諸如小凹、小凸、小曼、小DS等，用以有傚推廣我們的平台，增強品牌辨識度]]></item>
 			<item id="datatables"><![CDATA[]]></item>
-			<item id="directory"><![CDATA[apoyl_deepseekaipost/]]></item>
+			<item id="directory"><![CDATA[discuzdeepseekai/]]></item>
 			<item id="copyright"><![CDATA[凹凸曼]]></item>
 			<item id="version"><![CDATA[1.9.0]]></item>
 			<item id="__modules">

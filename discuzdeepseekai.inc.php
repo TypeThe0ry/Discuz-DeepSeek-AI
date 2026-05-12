@@ -23,7 +23,7 @@ if (! defined('IN_DISCUZ')) {
 }
 
 global $_G;
-$cache = $_G['cache']['plugin']['apoyl_deepseekaipost'];
+$cache = $_G['cache']['plugin']['discuzdeepseekai'];
 $tid = intval($_GET['tid']);
 isset($_GET['ac'])?$ac = $_GET['ac']:$ac='';
 isset($_GET['come'])?$come = $_GET['come']:$come='';
@@ -33,18 +33,18 @@ if (! $tid) {
 
 
 if (! $cache['openai']) {
-    $msg = lang('plugin/apoyl_deepseekaipost', 'err_close');
+    $msg = lang('plugin/discuzdeepseekai', 'err_close');
     debugApoylAotu($cache['opendebug'],$tid, $msg);
     exit();
 }
 
 if (! in_array($_G['groupid'], unserialize($cache['groups']))) {
-    $msg = lang('plugin/apoyl_deepseekaipost', 'err_groupid');
+    $msg = lang('plugin/discuzdeepseekai', 'err_groupid');
     debugApoylAotu($cache['opendebug'],$tid, $msg);
     exit();
 }
 if ($_GET['formhash'] != FORMHASH) {
-    $msg = lang('plugin/apoyl_deepseekaipost', 'err_formhash');
+    $msg = lang('plugin/discuzdeepseekai', 'err_formhash');
     debugApoylAotu($cache['opendebug'],$tid, $msg);
     exit();
 }
@@ -52,7 +52,7 @@ if($cache['limitnums']>0){
     $postnum=C::t('forum_post')->count_visiblepost_by_tid($tid);
 
     if($cache['limitnums']<=$postnum) {
-        $msg = lang('plugin/apoyl_deepseekaipost', 'err_postnum');
+        $msg = lang('plugin/discuzdeepseekai', 'err_postnum');
         debugApoylAotu($cache['opendebug'],$tid, $msg);
         exit();
     }
@@ -70,7 +70,7 @@ if($cache['opentime']||$cache['opendelayreply']||$cache['openfirstvip']){
 
 if($cache['opentime']&&$threadrow){
     if($cache['limittime']&&$threadrow['dateline']<=strtotime($cache['limittime'])){
-        $msg = lang('plugin/apoyl_deepseekaipost', 'err_time');
+        $msg = lang('plugin/discuzdeepseekai', 'err_time');
         debugApoylAotu($cache['opendebug'],$tid, $msg);
         exit();
     }
@@ -78,7 +78,7 @@ if($cache['opentime']&&$threadrow){
 if($cache['opendelayreply']&&$threadrow){
     $delaytime=getRandNums($cache['delaytime']);
     if($delaytime&&$threadrow['lastpost']+$delaytime>=TIMESTAMP){
-        $msg = lang('plugin/apoyl_deepseekaipost', 'err_delay');
+        $msg = lang('plugin/discuzdeepseekai', 'err_delay');
         debugApoylAotu($cache['opendebug'],$tid, $msg);
         exit();
     }
@@ -88,14 +88,14 @@ if ($cache['users']) {
     $i = array_rand($userarr);
     $postuid = $userarr[$i];
     if (! $postuid) {
-        $msg = lang('plugin/apoyl_deepseekaipost', 'err_uid');
+        $msg = lang('plugin/discuzdeepseekai', 'err_uid');
         debugApoylAotu($cache['opendebug'],$tid, $msg);
         exit();
     }
     $row = C::t('common_member')->fetch($postuid);
     if (! $row) {
 
-        $msg = lang('plugin/apoyl_deepseekaipost', 'err_username');
+        $msg = lang('plugin/discuzdeepseekai', 'err_username');
         debugApoylAotu($cache['opendebug'],$tid, $msg);
         exit();
     }
@@ -124,7 +124,7 @@ if ($tid) {
 
     }else{
         if($cache['openautoreply']){
-            $post = C::t('#apoyl_deepseekaipost#forum_postext')->fetch_last_new($tid, array(
+            $post = C::t('#discuzdeepseekai#forum_postext')->fetch_last_new($tid, array(
                 0,
                 - 2
             ));
@@ -171,7 +171,7 @@ if ($tid) {
                 }
             }
         }else{
-            $modpost = C::t('#apoyl_deepseekaipost#forum_postext')->fetch_threadpost_by_tid_invisible_new($tid, -2);
+            $modpost = C::t('#discuzdeepseekai#forum_postext')->fetch_threadpost_by_tid_invisible_new($tid, -2);
 
             if($modpost)
                 exit();
@@ -201,19 +201,19 @@ if ($tid) {
 
 
 if (! $text) {
-    $msg = lang('plugin/apoyl_deepseekaipost', 'err_text');
+    $msg = lang('plugin/discuzdeepseekai', 'err_text');
     debugApoylAotu($cache['opendebug'],$tid, $msg);
     exit();
 }
 if (! function_exists('curl_init')) {
-    $msg = lang('plugin/apoyl_deepseekaipost', 'err_curl');
+    $msg = lang('plugin/discuzdeepseekai', 'err_curl');
     debugApoylAotu($cache['opendebug'],$tid, $msg);
     exit();
 }
 $openlimit=$cache['openlimit'];
 $limitword='';
 if($openlimit>0){
-    $limitword=lang('plugin/apoyl_deepseekaipost', 'aiclimit'.$openlimit);
+    $limitword=lang('plugin/discuzdeepseekai', 'aiclimit'.$openlimit);
 }
 
 if($cache['openlimittriggering']){
@@ -306,7 +306,7 @@ function debugApoylAotu($opendebug,$tid, $message)
 {
    
     if ($opendebug) {
-        C::t('#apoyl_deepseekaipost#apoyl_deepseekaipost_error')->insert(array(
+        C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->insert(array(
             'tid' => $tid,
             'message' => $message,
             'addtime' => TIMESTAMP

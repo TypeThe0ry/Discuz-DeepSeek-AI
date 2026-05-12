@@ -22,18 +22,18 @@ if (! defined('IN_DISCUZ')) {
     exit('Access Denied');
 }
 
-class plugin_apoyl_deepseekaipost
+class plugin_discuzdeepseekai
 {
 
 }
 
-class plugin_apoyl_deepseekaipost_forum extends plugin_apoyl_deepseekaipost
+class plugin_discuzdeepseekai_forum extends plugin_discuzdeepseekai
 {
 
     public function viewthread_bottom_output($a)
     {
         global $_G;
-        $cache = $_G['cache']['plugin']['apoyl_deepseekaipost'];
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
         $return = '';
 
         if ($cache['openai'] && $_G['thread']['displayorder'] >= 0) {
@@ -42,10 +42,10 @@ class plugin_apoyl_deepseekaipost_forum extends plugin_apoyl_deepseekaipost
 
             if (in_array($_G['groupid'], unserialize($cache['groups'])) && in_array($_G['fid'], unserialize($cache['forums']))) {
                 $tid = intval($_GET['tid']);
-                $apoyl_deepseekaipost_url = 'plugin.php?id=apoyl_deepseekaipost&tid=' . $tid . '&formhash=' . FORMHASH;
+                $apoyl_deepseekaipost_url = 'plugin.php?id=discuzdeepseekai&tid=' . $tid . '&formhash=' . FORMHASH;
                 $openonload=$cache['openonload'];
 
-                include template('apoyl_deepseekaipost:auto');
+                include template('discuzdeepseekai:auto');
             }
         }
 
@@ -53,14 +53,14 @@ class plugin_apoyl_deepseekaipost_forum extends plugin_apoyl_deepseekaipost
     }
 }
 
-class plugin_apoyl_deepseekaipost_group extends plugin_apoyl_deepseekaipost
+class plugin_discuzdeepseekai_group extends plugin_discuzdeepseekai
 {
 
     public function viewthread_bottom_output($a)
     {
         global $_G;
         
-        $cache = $_G['cache']['plugin']['apoyl_deepseekaipost'];
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
         $return='';
         if($cache['opengroup']){
             if ($cache['openai'] && $_G['thread']['displayorder'] >= 0 && ! ($cache['openattach'] && $_G['thread']['attachment'] > 0)) {
@@ -68,9 +68,9 @@ class plugin_apoyl_deepseekaipost_group extends plugin_apoyl_deepseekaipost
                 if (in_array($_G['groupid'], unserialize($cache['groups']))) {
 
                     $tid = intval($_GET['tid']);
-                    $apoyl_deepseekaipost_url = 'plugin.php?id=apoyl_deepseekaipost&come=group&tid=' . $tid . '&formhash=' . FORMHASH;
+                    $apoyl_deepseekaipost_url = 'plugin.php?id=discuzdeepseekai&come=group&tid=' . $tid . '&formhash=' . FORMHASH;
                     $openonload=$cache['openonload'];
-                    include template('apoyl_deepseekaipost:auto');
+                    include template('discuzdeepseekai:auto');
                 }
 
             }
@@ -81,21 +81,21 @@ class plugin_apoyl_deepseekaipost_group extends plugin_apoyl_deepseekaipost
 
 }
 
-class plugin_apoyl_deepseekaipost_portal extends plugin_apoyl_deepseekaipost
+class plugin_discuzdeepseekai_portal extends plugin_discuzdeepseekai
 {
 
     public function view_article_content_output($a)
     {
         global $_G;
-        $cache = $_G['cache']['plugin']['apoyl_deepseekaipost'];
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
         $return='';
         if($cache['openarticle']&&$cache['openai']){
             $aid = intval($_GET['aid']);
             if ($aid) {
                 if (in_array($_G['groupid'], unserialize($cache['groups']))) {
-                    $apoyl_deepseekaipost_url = 'plugin.php?id=apoyl_deepseekaipost:article&articleid=' . $aid . '&formhash=' . FORMHASH;
+                    $apoyl_deepseekaipost_url = 'plugin.php?id=discuzdeepseekai:article&articleid=' . $aid . '&formhash=' . FORMHASH;
                     $openonload=$cache['openonload'];
-                    include template('apoyl_deepseekaipost:auto');
+                    include template('discuzdeepseekai:auto');
                 }
             }
         }

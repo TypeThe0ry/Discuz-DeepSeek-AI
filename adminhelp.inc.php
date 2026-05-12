@@ -23,45 +23,45 @@ if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) {
 }
 showtableheader();
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_copy')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_copy')));
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_aliyunvideo')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_tencentvideo')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_mtime')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_aiarticle')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_weixincrawloverride')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_modquantity')));
-
-
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_mpage')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_paytel')));
-
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_threadverify')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_picdivision')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_chatgpt')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_fastpost')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_aliyunvideo')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_tencentvideo')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_mtime')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_aiarticle')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_weixincrawloverride')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_modquantity')));
 
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_autopost')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_baiduaipost')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_mpage')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_paytel')));
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_moderator')));
-
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_baidufast')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_auditall')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_listhide')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_aliyunasyncscan')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_threadclose')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_telattach')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_threadverify')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_picdivision')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_chatgpt')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_fastpost')));
 
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_aliyunaiclean')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_aliyuncontent')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','apoyl_tencentcaptcha')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_autopost')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_baiduaipost')));
 
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','addr')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','blog')));
-showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','qq')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_moderator')));
+
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_baidufast')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_auditall')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_listhide')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_aliyunasyncscan')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_threadclose')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_telattach')));
+
+
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_aliyunaiclean')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_aliyuncontent')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','apoyl_tencentcaptcha')));
+
+showtablerow('','',array(lang('plugin/discuzdeepseekai','addr')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','blog')));
+showtablerow('','',array(lang('plugin/discuzdeepseekai','qq')));
 
 showtablefooter();
 

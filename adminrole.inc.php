@@ -27,14 +27,14 @@ if($file){
 }else{
 
     showtableheader();
-    showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','buy_role')));
+    showtablerow('','',array(lang('plugin/discuzdeepseekai','buy_role')));
     showtablefooter();
 }
 
 
 function _fileapoylv2($filename)
 {
-    $fileapoyl = DISCUZ_ROOT . './source/plugin/apoyl_deepseekaipost/components/' . $filename . '.php';
+    $fileapoyl = DISCUZ_ROOT . './source/plugin/discuzdeepseekai/components/' . $filename . '.php';
     if (file_exists($fileapoyl))
         return $fileapoyl;
     return '';

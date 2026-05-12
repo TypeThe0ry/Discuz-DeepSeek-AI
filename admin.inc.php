@@ -24,7 +24,7 @@ if (! defined('IN_DISCUZ') || ! defined('IN_ADMINCP')) {
 if ($_GET['go'] == 'del' && $_GET['formhash'] == FORMHASH) {
     $delid=intval($_GET['delid']);
     if ($delid>0) {
-        C::t('#apoyl_deepseekaipost#apoyl_deepseekaipost_error')->delete($delid);
+        C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->delete($delid);
     }
 }
 showtableheader();
@@ -32,21 +32,21 @@ showtableheader();
 $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
 $prepage = 20;
 $start = ($page - 1) * $prepage;
-$num = C::t('#apoyl_deepseekaipost#apoyl_deepseekaipost_error')->count();
-$multipage = multi($num, $prepage, $page, ADMINSCRIPT . '?action=plugins&operation=config&do=' . $pluginid . '&identifier=apoyl_deepseekaipost&pmod=admin');
-$arr = C::t('#apoyl_deepseekaipost#apoyl_deepseekaipost_error')->range($start, $prepage, 'addtime desc');
+$num = C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->count();
+$multipage = multi($num, $prepage, $page, ADMINSCRIPT . '?action=plugins&operation=config&do=' . $pluginid . '&identifier=discuzdeepseekai&pmod=admin');
+$arr = C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->range($start, $prepage, 'addtime desc');
 showsubtitle(array(
     'ID',
-    lang('plugin/apoyl_deepseekaipost', 'tid'),
+    lang('plugin/discuzdeepseekai', 'tid'),
     
-    lang('plugin/apoyl_deepseekaipost', 'err_msg'),
-    lang('plugin/apoyl_deepseekaipost', 'addtime'),
-    lang('plugin/apoyl_deepseekaipost', 'ac')
+    lang('plugin/discuzdeepseekai', 'err_msg'),
+    lang('plugin/discuzdeepseekai', 'addtime'),
+    lang('plugin/discuzdeepseekai', 'ac')
 ));
 foreach ($arr as $v) {
     if ($v['addtime'])
         $addtime = dgmdate($v['addtime'], 'u', '9999', getglobal('setting/dateformat') . ' H:i:s');
-    $delurl = '<a href="' . ADMINSCRIPT . '?action=plugins&operation=config&do=' . $pluginid . '&identifier=apoyl_deepseekaipost&pmod=admin&page=' . $page . '&go=del&delid=' . $v['id'] . '&formhash=' . formhash() . '" onclick="javascript:if(!confirm(\'' . lang('plugin/apoyl_deepseekaipost', 'del_msg') . '\')){return false}">' . lang('plugin/apoyl_deepseekaipost', 'del') . '</a>';
+    $delurl = '<a href="' . ADMINSCRIPT . '?action=plugins&operation=config&do=' . $pluginid . '&identifier=discuzdeepseekai&pmod=admin&page=' . $page . '&go=del&delid=' . $v['id'] . '&formhash=' . formhash() . '" onclick="javascript:if(!confirm(\'' . lang('plugin/discuzdeepseekai', 'del_msg') . '\')){return false}">' . lang('plugin/discuzdeepseekai', 'del') . '</a>';
     
     showtablerow('', array('width="60"', 'width="60"', 'width="160"',  'width="60"',  'width="60"'), array(
         $v['id'],

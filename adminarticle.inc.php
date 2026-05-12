@@ -33,7 +33,7 @@ if($file){
     include $file;
 }else{
     showtableheader();
-    showtablerow('','',array(lang('plugin/apoyl_deepseekaipost','buy_article')));
+    showtablerow('','',array(lang('plugin/discuzdeepseekai','buy_article')));
     showtablefooter();
 
 }
