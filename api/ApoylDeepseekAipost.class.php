@@ -91,7 +91,7 @@ class ApoylDeepseekAipost
         if ($custom_prompt !== '') {
             $ctx = is_array($promptctx) ? $promptctx : array();
             $title   = isset($ctx['title'])   ? (string)$ctx['title']   : '';
-            $content = isset($ctx['content']) ? (string)$ctx['content'] : (string)$prompt;
+            $content = isset($ctx['content']) ? (string)$ctx['content'] : '';
             $forum   = isset($ctx['forum'])   ? (string)$ctx['forum']   : '';
             $author  = isset($ctx['author'])  ? (string)$ctx['author']  : '';
             $custom_prompt = str_replace(

@@ -306,7 +306,10 @@ function debugApoylAotu($opendebug,$tid, $message)
 {
    
     if ($opendebug) {
-        C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->insert(array(
+            // Note: the table class file/name `apoyl_deepseekaipost_error` is intentionally
+            // preserved to keep the legacy DB schema (table `pre_plugin_apoyl_deepseekaipost_err`)
+            // intact across upgrades. Only the plugin-directory prefix has been updated.
+            C::t('#discuzdeepseekai#apoyl_deepseekaipost_error')->insert(array(
             'tid' => $tid,
             'message' => $message,
             'addtime' => TIMESTAMP
