@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.5]]></item>
+	<item id="Time"><![CDATA[2026-05-12 07:27]]></item>
+		<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[AIDeepSeek自动回帖]]></item>
+			<item id="identifier"><![CDATA[discuzdeepseekai]]></item>
+			<item id="description"><![CDATA[发布帖子后，自动激活AI进行回复，AI不仅能持续参与回帖，还能预设特定的回复账号昵称，诸如小凹、小凸、小曼、小DS等，用以有效推广我们的平台，增强品牌辨识度]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[discuzdeepseekai/]]></item>
+			<item id="copyright"><![CDATA[TypeThe0ry]]></item>
+			<item id="version"><![CDATA[1.9.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[mbdeepseekaipost]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[deepseekaipost]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+								<item id="3">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[帖子调试信息]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[开启AI]]></item>
+				<item id="description"><![CDATA[开启时候手机版或电脑版帖子自动回帖
+]]></item>
+				<item id="variable"><![CDATA[openai]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[DeepSeek大模型]]></item>
+				<item id="description"><![CDATA[可选择deepseek-v4-flash、deepseek-v4-pro]]></item>
+				<item id="variable"><![CDATA[deepseekllm]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=deepseek-v4-flash
+2=deepseek-v4-pro]]></item>
+			</item>
+			<item id="v2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[DeepSeek API keys]]></item>
+				<item id="description"><![CDATA[DeepSeek API keys
+申请地址：https://platform.deepseek.com/api_keys]]></item>
+				<item id="variable"><![CDATA[apikey]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[人工审核]]></item>
+				<item id="description"><![CDATA[开启人工审核后台，DeepSeekAI自动回帖的内容会进入内容审核-》审核帖子里]]></item>
+				<item id="variable"><![CDATA[openinvisible]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[vip用户组]]></item>
+				<item id="description"><![CDATA[开启哪些vip用户组才能页面触发]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[开启版块]]></item>
+				<item id="description"><![CDATA[开启哪些版块下面的主题会DeepSeekAI自动回帖]]></item>
+				<item id="variable"><![CDATA[forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[5]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[开启回帖来源]]></item>
+				<item id="description"><![CDATA[开启后，下面回帖来源 回帖的时候就会跟回帖来源]]></item>
+				<item id="variable"><![CDATA[openfrom]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[回帖来源]]></item>
+				<item id="description"><![CDATA[回帖内容后面接来源
+比如说设置 来源：hahaTT插件，这样让用户了解信息来源可为用户提供参考]]></item>
+				<item id="variable"><![CDATA[from]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[--来源：hahaTT插件]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[多马甲回复]]></item>
+				<item id="description"><![CDATA[多马甲回复
+可随机回复,用户uid,英文分割
+比如小凹、小凸、小曼、小飞，方便宣传自己平台，设置对应的用户名的UID
+如1,3
+]]></item>
+				<item id="variable"><![CDATA[users]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[7,8,9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[免审核用户组]]></item>
+				<item id="description"><![CDATA[开启时候免审核的用户组，用户不会审核，直接显示出来，方便管理员组和VIP用户使用]]></item>
+				<item id="variable"><![CDATA[mgroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[关闭附件主题自动回复 ...]]></item>
+				<item id="description"><![CDATA[选择是：关闭带有附件的主题自动回复
+选择否： 带附件主题也会自动回复]]></item>
+				<item id="variable"><![CDATA[openattach]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[无限连续自动回帖]]></item>
+				<item id="description"><![CDATA[当前主题下最后回帖不包含AI马甲回帖才自动回帖
+模式采用自动引用回帖，引用回帖可能是多个回帖，更好供用户参考]]></item>
+				<item id="variable"><![CDATA[openautoreply]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[开启引用回复]]></item>
+				<item id="description"><![CDATA[开启时候引用回复，有引用内容回复
+方便AI针对性回答]]></item>
+				<item id="variable"><![CDATA[openquote]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[群组DeepSeekAI自动回帖]]></item>
+				<item id="description"><![CDATA[开启群组自动回复后，群组没有回帖的新主题和老主题会自动回复，可能存在多个DeepSeekAI回帖,这样好处供作者挑选]]></item>
+				<item id="variable"><![CDATA[opengroup]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[开启调试]]></item>
+				<item id="description"><![CDATA[开启调试结果信息，错误信息会记录下来。
+方便查看接口处什么情况。
+建议正常使用可以关闭。]]></item>
+				<item id="variable"><![CDATA[opendebug]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[回帖评论字数限制]]></item>
+				<item id="description"><![CDATA[默认 不限制讯飞AI想返回多少就是多少
+限制了字数返回，这样返回的限制了
+比如
+限制50个字左右 
+限制100个字左右
+限制150个字左右]]></item>
+				<item id="variable"><![CDATA[openlimit]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0=默认
+1=限制50个字左右
+2=限制100个字左右
+3=限制150个字左右]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[首帖回复的方式]]></item>
+				<item id="description"><![CDATA[针对首帖回复的时候
+可选择
+1、标题
+2、标题+内容
+3、内容]]></item>
+				<item id="variable"><![CDATA[selectfirst]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=标题
+2=标题+内容
+3=内容]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[帖子回复数上限]]></item>
+				<item id="description"><![CDATA[帖子回复数超过设置值，就会关闭AI自动回帖
+设置0时候，关闭上限]]></item>
+				<item id="variable"><![CDATA[limitnums]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[开启时间限制]]></item>
+				<item id="description"><![CDATA[为什么用这个功能呢？比如你不想要老帖子自动回帖，那就可以开启此功能
+对应主题发帖时间]]></item>
+				<item id="variable"><![CDATA[opentime]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[设置时间限制]]></item>
+				<item id="description"><![CDATA[主题发布时间之前的就不自动回帖
+主要对旧主题或者旧文章不在自动回帖]]></item>
+				<item id="variable"><![CDATA[limittime]]></item>
+				<item id="type"><![CDATA[datetime]]></item>
+				<item id="value"><![CDATA[2025-02-24 10:38]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[文章DeepSeek自动评论组件 ...]]></item>
+				<item id="description"><![CDATA[门户文章实现自动评论]]></item>
+				<item id="variable"><![CDATA[openarticle]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+						<item id="27">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[开启延时回帖和评论 ...]]></item>
+				<item id="description"><![CDATA[开启延时回帖和评论
+设置下面延时回帖秒数
+这样更加真实]]></item>
+				<item id="variable"><![CDATA[opendelayreply]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[延时回帖和评论秒数 ...]]></item>
+				<item id="description"><![CDATA[上一个帖子回帖和门户文章评论的时间基础完后延时回帖
+比如 30~60 也就是30 秒后触发]]></item>
+				<item id="variable"><![CDATA[delaytime]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[30~60]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[等待资源加载完触发 ...]]></item>
+				<item id="description"><![CDATA[打开：等待所有资源（包含图片）加载完触发
+关闭：默认页面触发]]></item>
+				<item id="variable"><![CDATA[openonload]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[自定义 Prompt]]></item>
+				<item id="description"><![CDATA[用于控制 AI 回帖的身份、语气、格式和回答规则。支持变量：
+{title} = 帖子标题
+{content} = 帖子正文
+{forum} = 版块名称
+{author} = 发帖用户名
+留空则使用插件原本的默认逻辑（保持旧版本行为）。]]></item>
+				<item id="variable"><![CDATA[custom_prompt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[你是一个 Discuz 论坛智能助手。请根据用户发布的帖子内容，生成一条自然、友好、有帮助的中文回复。不要暴露你是 AI，也不要提到 API、模型或系统提示词。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="english"><![CDATA[chinese]]></item>
+																																																																																																																								<item id="err_login"><![CDATA[亲，你没有登录,非法请求]]></item>
+				<item id="err_formhash"><![CDATA[亲，自身系统formhash验证出错！]]></item>
+				<item id="err_groupid"><![CDATA[亲，你没有VIP权限,请联系管理员！]]></item>
+				<item id="err_text"><![CDATA[亲，没有内容！]]></item>
+				<item id="err_close"><![CDATA[亲，已关闭AI回复！]]></item>
+				<item id="err_close_tids"><![CDATA[亲，已关闭指定帖回帖！]]></item>
+				<item id="err_uid"><![CDATA[亲，没有设置马甲！]]></item>
+				<item id="err_uid_tids"><![CDATA[亲，没有设置指定帖马甲！]]></item>
+				<item id="err_username"><![CDATA[亲，用户不存在，请检查马甲设置！]]></item>
+				<item id="err_postnum"><![CDATA[亲，	帖子回复数上限超过设置值！]]></item>
+				<item id="err_type"><![CDATA[亲，开启限制主题分类组件，此主题分类没有填写到主题分类ID中！]]></item>
+				<item id="err_time"><![CDATA[亲，你已经开启时间限制，旧内容就不会自动回帖！]]></item>
+				<item id="err_msg"><![CDATA[调试信息]]></item>
+				<item id="ac"><![CDATA[操作]]></item>
+				<item id="del"><![CDATA[删除]]></item>
+				<item id="addtime"><![CDATA[操作时间]]></item>
+				<item id="tid"><![CDATA[主题TID]]></item>
+				<item id="aid"><![CDATA[文章TID]]></item>
+				<item id="err_curl"><![CDATA[亲，PHP环境扩展curl没有安装]]></item>
+				<item id="del_msg"><![CDATA[亲，删除不可恢复，是否继续?]]></item>
+				<item id="aiclimit1"><![CDATA[前面内容用正能量的词语评论，限制50个字左右]]></item>
+				<item id="aiclimit2"><![CDATA[前面内容用正能量的词语评论，限制100个字左右]]></item>
+				<item id="aiclimit3"><![CDATA[前面内容用正能量的词语评论，限制150个字左右]]></item>
+				<item id="tidsai_tips"><![CDATA[返回一句顶贴回帖字数范围：{nums}到50个字]]></item>
+								<item id="titleadd"><![CDATA[添加角色]]></item>
+				<item id="titlemod"><![CDATA[编辑角色]]></item>
+				<item id="role_uid"><![CDATA[UID]]></item>
+				<item id="role_username"><![CDATA[用户名]]></item>
+				<item id="role_desp"><![CDATA[角色]]></item>
+				<item id="acname"><![CDATA[操作]]></item>
+				<item id="edit"><![CDATA[编辑]]></item>
+				<item id="delmsg"><![CDATA[亲，是否确定删除？]]></item>
+				<item id="uid_msg"><![CDATA[用户UID]]></item>
+				<item id="rolename_msg"><![CDATA[设定角色 <br>比如说：我要你担任评论员。我将为您提供与新闻相关的故事或主题，您将撰写一篇评论文章，对手头的主题提供有见地的评论<br>我想让你扮演一个小说家。您将想出富有创意且引人入胜的故事，可以长期吸引读者。你可以选择任何类型，如奇幻、浪漫、历史小说等——但你的目标是写出具有出色情节、引人入胜的人物和意想不到的高潮的作品。我的第一个要求是“我要写一部以未来为背景的科幻小说<br>等等等。]]></item>
+				<item id="error_username"><![CDATA[不存在,用户里添加]]></item>
+				<item id="err_delay"><![CDATA[亲，你已经开启延时回帖，此贴延后回帖！]]></item>
+				<item id="err_delay_article"><![CDATA[亲，你已经开启延时评论，此贴延后评论！]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="english"><![CDATA[chinese]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+	</item>
+	</root>

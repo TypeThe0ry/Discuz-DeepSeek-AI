@@ -1,0 +1,88 @@
+<?php
+if (! defined('IN_DISCUZ')) {
+    exit('Access Denied');
+}
+
+class plugin_discuzdeepseekai
+{
+
+}
+
+class plugin_discuzdeepseekai_forum extends plugin_discuzdeepseekai
+{
+
+    public function viewthread_bottom_output($a)
+    {
+        global $_G;
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
+        $return = '';
+
+        if ($cache['openai'] && $_G['thread']['displayorder'] >= 0) {
+
+            if($cache['openattach']&&$_G['thread']['attachment']>0)  return $return;
+
+            if (in_array($_G['groupid'], unserialize($cache['groups'])) && in_array($_G['fid'], unserialize($cache['forums']))) {
+                $tid = intval($_GET['tid']);
+                $discuzdeepseekai_url = 'plugin.php?id=discuzdeepseekai&tid=' . $tid . '&formhash=' . FORMHASH;
+                $openonload=$cache['openonload'];
+
+                include template('discuzdeepseekai:auto');
+            }
+        }
+
+        return $return;
+    }
+}
+
+class plugin_discuzdeepseekai_group extends plugin_discuzdeepseekai
+{
+
+    public function viewthread_bottom_output($a)
+    {
+        global $_G;
+        
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
+        $return='';
+        if($cache['opengroup']){
+            if ($cache['openai'] && $_G['thread']['displayorder'] >= 0 && ! ($cache['openattach'] && $_G['thread']['attachment'] > 0)) {
+
+                if (in_array($_G['groupid'], unserialize($cache['groups']))) {
+
+                    $tid = intval($_GET['tid']);
+                    $discuzdeepseekai_url = 'plugin.php?id=discuzdeepseekai&come=group&tid=' . $tid . '&formhash=' . FORMHASH;
+                    $openonload=$cache['openonload'];
+                    include template('discuzdeepseekai:auto');
+                }
+
+            }
+        }
+
+        return $return;
+    }
+
+}
+
+class plugin_discuzdeepseekai_portal extends plugin_discuzdeepseekai
+{
+
+    public function view_article_content_output($a)
+    {
+        global $_G;
+        $cache = $_G['cache']['plugin']['discuzdeepseekai'];
+        $return='';
+        if($cache['openarticle']&&$cache['openai']){
+            $aid = intval($_GET['aid']);
+            if ($aid) {
+                if (in_array($_G['groupid'], unserialize($cache['groups']))) {
+                    $discuzdeepseekai_url = 'plugin.php?id=discuzdeepseekai:article&articleid=' . $aid . '&formhash=' . FORMHASH;
+                    $openonload=$cache['openonload'];
+                    include template('discuzdeepseekai:auto');
+                }
+            }
+        }
+        return $return;
+    }
+
+}
+
+?>
